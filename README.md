@@ -1,6 +1,6 @@
 # basalt.
 
-Home estática (S-01), em HTML e CSS, sem etapa de build. A página é o `index.html` da raiz. Fontes, logotipo e imagem ficam em `assets/`.
+Home estática (S-01), em HTML e CSS, sem etapa de build. A página é o `index.html` da raiz e tem cara de painel: menu lateral fixo no desktop e barra inferior no celular. Fontes, logotipo e imagem ficam em `assets/`.
 
 ## Importar o repositório na Vercel
 
