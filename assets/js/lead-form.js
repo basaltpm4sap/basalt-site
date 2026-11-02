@@ -18,8 +18,8 @@
   var PRODUCTION_HOSTS = [];
 
   var MESSAGES = {
-    emailEmpty: "[TEXTO BRAGI: erro de e-mail vazio]",
-    emailInvalid: "[TEXTO BRAGI: erro de e-mail inválido]",
+    emailEmpty: "Informe seu e-mail para receber o playbook.",
+    emailInvalid: "Confira o e-mail: parece que falta algo no endereço.",
     unconfigured: "O cadastro ainda não está ativo neste ambiente.",
     preview: "Prévia: o envio foi simulado e nenhum dado foi armazenado.",
     network: "Não deu para confirmar o envio. O download está liberado mesmo assim.",
