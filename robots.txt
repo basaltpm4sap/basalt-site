@@ -1,0 +1,9 @@
+# basalt.
+# A página /playbook-sap-activate/ pode ser indexada.
+# Os PDFs do playbook, não.
+
+User-agent: *
+Allow: /
+
+Disallow: /assets/downloads/
+Disallow: /assets/js/playbook-downloads.js
