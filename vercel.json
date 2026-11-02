@@ -10,9 +10,21 @@
       ]
     },
     {
-      "source": "/assets/(.*\\.(?:ttf|png))",
+      "source": "/assets/(.*\\.(?:ttf|png|webp))",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/downloads/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/assets/js/playbook-downloads.js",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
       ]
     }
   ]

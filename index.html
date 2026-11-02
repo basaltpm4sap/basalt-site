@@ -47,6 +47,10 @@
     <symbol id="i-pages" viewBox="0 0 24 24">
       <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" d="M7 4.5h8.2L19 8.2V19a1.2 1.2 0 0 1-1.2 1.2H7A1.2 1.2 0 0 1 5.8 19V5.7A1.2 1.2 0 0 1 7 4.5zM8.6 11h6.8M8.6 14.2h6.8M8.6 17.2h4.2"/>
     </symbol>
+    <symbol id="i-playbook" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M7 3.5h7.2L18.5 7.6V19.5a1.2 1.2 0 0 1-1.2 1.2H7A1.2 1.2 0 0 1 5.8 19.5V4.7A1.2 1.2 0 0 1 7 3.5z"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8.5 11.2h6.2M8.5 14.2h6.2M8.5 17.2h3.6"/>
+    </symbol>
     <symbol id="i-info" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
       <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 11v5.2M12 8h.01"/>
@@ -75,6 +79,12 @@
             <a href="#activate" data-target="activate">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg>
               <span>SAP Activate</span>
+            </a>
+          </li>
+          <li>
+            <a href="playbook-sap-activate/">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-playbook"/></svg>
+              <span>Playbook</span>
             </a>
           </li>
           <li>
@@ -145,6 +155,20 @@
             <img src="assets/hero-basalto.png" alt="" width="513" height="537" fetchpriority="high" decoding="async">
           </div>
         </article>
+
+        <section class="card playbook-cta" aria-labelledby="playbook-cta-titulo">
+          <div class="playbook-cta-copy">
+            <h2 class="section-title" id="playbook-cta-titulo">SAP Activate em uma página</h2>
+            <p>As 6 fases do Discover ao Run, com o marco, os lembretes e o quality gate de cada uma. Gratuito.</p>
+            <a class="btn" href="playbook-sap-activate/" data-open-playbook>
+              Baixar o playbook
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="playbook-cta-photo">
+            <img src="assets/playbook/playbook-sap-activate-v1-claro-1600.webp" alt="Prévia do Playbook SAP Activate em versão clara." width="1600" height="900" decoding="async">
+          </div>
+        </section>
 
         <section class="card" id="activate" aria-labelledby="conteudos" data-provisorio="texto">
           <h2 class="section-title" id="conteudos">O mapa das 6 fases</h2>
@@ -261,6 +285,12 @@
           </div>
         </section>
       </main>
+      <footer class="site-footer">
+        <a class="footer-mark" href="#inicio">basalt<span class="dot">.</span></a>
+        <nav aria-label="Rodapé">
+          <a href="politica-de-privacidade/">Política de Privacidade</a>
+        </nav>
+      </footer>
     </div>
 
     <nav class="tabbar" aria-label="Principal">
@@ -279,6 +309,12 @@
           </a>
         </li>
         <li>
+          <a href="playbook-sap-activate/">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-playbook"/></svg>
+            <span>Playbook</span>
+          </a>
+        </li>
+        <li>
           <a href="#templates" data-target="templates">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>
             <span>Templates</span>
@@ -294,6 +330,40 @@
     </nav>
   </div>
 
+  <div class="modal" id="playbook-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="playbook-modal-title">
+      <button type="button" class="modal-close" data-close-modal>Fechar</button>
+      <form data-lead-form novalidate>
+        <h2 id="playbook-modal-title">Quero o playbook</h2>
+        <div class="hp" aria-hidden="true">
+          <label for="hp_field">Empresa</label>
+          <input id="hp_field" name="hp_field" type="text" tabindex="-1" autocomplete="off" autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="email">Seu melhor e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" autocorrect="off" spellcheck="false" required maxlength="254" aria-required="true" aria-invalid="false" aria-describedby="email-erro">
+          <p id="email-erro" class="field-error" role="alert"></p>
+        </div>
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox" value="true">
+          <label for="consent">Aceito receber conteúdos da basalt. por e-mail sobre gestão de projetos SAP. Posso cancelar a qualquer momento pelo link de descadastro presente em cada e-mail. Meus dados serão tratados conforme a <a href="politica-de-privacidade/">Política de Privacidade</a>.</label>
+        </div>
+        <button class="btn" type="submit">Quero o playbook</button>
+        <p class="form-status" data-form-status role="status"></p>
+      </form>
+      <div class="success" data-success hidden>
+        <h2 id="sucesso-titulo" tabindex="-1">Pronto, o playbook é seu.</h2>
+        <p>Escolha a versão que funciona melhor para você. A clara foi pensada para impressão; a escura, para consulta na tela.</p>
+        <div class="downloads" data-downloads></div>
+        <p class="preview-note" data-preview-note hidden></p>
+        <p class="preview-note" data-network-note hidden></p>
+        <p class="signoff" lang="en">built for excellence.</p>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/site.js"></script>
+  <script src="assets/js/lead-form.js"></script>
 </body>
 </html>
